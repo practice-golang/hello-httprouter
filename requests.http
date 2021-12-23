@@ -1,0 +1,28 @@
+@uri = http://localhost:4416
+
+
+### index
+GET {{uri}} HTTP/1.1
+Origin: http://localhost:4416
+
+### GET slash param
+GET {{uri}}/hello/John HTTP/1.1
+Origin: http://localhost:4416
+
+### POST - form
+POST {{uri}}/login HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Origin: http://localhost:4416
+
+name=john&password=12345
+&name=john&password=12345
+
+### POST - JSON
+POST {{uri}}/user HTTP/1.1
+content-type: application/json
+Origin: http://localhost:4416
+
+{
+    "name": "sample",
+    "age": "999"
+}
