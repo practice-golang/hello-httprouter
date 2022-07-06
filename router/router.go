@@ -1,4 +1,5 @@
 // Source: https://gist.github.com/Hunsin/26b2021757e831554d4f59a52a5c9152
+// via https://github.com/julienschmidt/httprouter/issues/216
 package router
 
 import (
