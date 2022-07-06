@@ -3,6 +3,7 @@ package route
 import (
 	"fmt"
 	"hello-httprouter/model"
+	"log"
 	"net/http"
 
 	"github.com/goccy/go-json"
@@ -14,6 +15,8 @@ func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 }
 
 func Hello(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+	log.Println(r.URL.Query().Get("age"))
+
 	fmt.Fprintf(w, "hello, %s!\n", ps.ByName("name"))
 }
 

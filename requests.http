@@ -9,6 +9,10 @@ Origin: http://localhost:4416
 GET {{uri}}/hello/John HTTP/1.1
 Origin: http://localhost:4416
 
+### GET slash and query param
+GET {{uri}}/hello/John?age=99 HTTP/1.1
+Origin: http://localhost:4416
+
 ### POST - form
 POST {{uri}}/login HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
